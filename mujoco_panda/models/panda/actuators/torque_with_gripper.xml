@@ -1,0 +1,33 @@
+<mujoco>
+    <motor name="arm_direct_actuator_1" joint="panda_joint1" class="panda" forcerange="-87 87" ctrlrange="-87 87"/> 
+    <motor name="arm_direct_actuator_2" joint="panda_joint2" class="panda" forcerange="-87 87" ctrlrange="-87 87"/> 
+    <motor name="arm_direct_actuator_3" joint="panda_joint3" class="panda" forcerange="-87 87" ctrlrange="-87 87"/> 
+    <motor name="arm_direct_actuator_4" joint="panda_joint4" class="panda" forcerange="-87 87" ctrlrange="-87 87"/> 
+    <motor name="arm_direct_actuator_5" joint="panda_joint5" class="panda" forcerange="-12 12" ctrlrange="-12 12"/> 
+    <motor name="arm_direct_actuator_6" joint="panda_joint6" class="panda" forcerange="-12 12" ctrlrange="-12 12"/> 
+    <motor name="arm_direct_actuator_7" joint="panda_joint7" class="panda" forcerange="-12 12" ctrlrange="-12 12"/> 
+    <!-- <motor name="gripper_direct_actuator_1" joint="panda_finger_joint1" class="panda_finger" forcerange="-70 70" ctrlrange="-70 70"/>
+    <motor name="gripper_direct_actuator_2" joint="panda_finger_joint2" class="panda_finger" forcerange="-70 70" ctrlrange="-70 70"/> -->
+
+    <position name="gripper_pos_actuator_1" joint="panda_finger_joint1" class="panda_finger" kp="500" forcerange="-70 70" ctrlrange="0 0.04"/>
+    <position name="gripper_pos_actuator_2" joint="panda_finger_joint2" class="panda_finger" kp="500" forcerange="-70 70" ctrlrange="0 0.04"/>
+    <!if using whips anotate the below code >
+    <!position name="gripper2_pos_actuator_1" joint="panda2_finger_joint1" class="panda_finger" kp="500" forcerange="-70 70" ctrlrange="0 0.04"/>
+    <!position name="gripper2_pos_actuator_2" joint="panda2_finger_joint2" class="panda_finger" kp="500" forcerange="-70 70" ctrlrange="0 0.04"/>
+    
+    <!-- <! drone1 actuators>
+    <motor ctrllimited="true" ctrlrange="0 1" gear="0  0. 1. 0. 0. -0.1" site="motor0" class="drone"/>
+    <motor ctrllimited="true" ctrlrange="0 1" gear="0  0. 1. 0. 0.  0.1" site="motor1" class="drone"/>
+    <motor ctrllimited="true" ctrlrange="0 1" gear="0  0. 1. 0. 0. -0.1" site="motor2" class="drone"/>
+    <motor ctrllimited="true" ctrlrange="0 1" gear="0  0. 1. 0. 0.  0.1" site="motor3" class="drone"/>
+    <! drone2 actuators>
+    <motor ctrllimited="true" ctrlrange="0 1" gear="0  0. 1. 0. 0. -0.1" site="motor4" class="drone"/>
+    <motor ctrllimited="true" ctrlrange="0 1" gear="0  0. 1. 0. 0.  0.1" site="motor5" class="drone"/>
+    <motor ctrllimited="true" ctrlrange="0 1" gear="0  0. 1. 0. 0. -0.1" site="motor6" class="drone"/>
+    <motor ctrllimited="true" ctrlrange="0 1" gear="0  0. 1. 0. 0.  0.1" site="motor7" class="drone"/>
+    <! drone3 actuators>
+    <motor ctrllimited="true" ctrlrange="0 1" gear="0  0. 1. 0. 0. -0.1" site="motor8" class="drone"/>
+    <motor ctrllimited="true" ctrlrange="0 1" gear="0  0. 1. 0. 0.  0.1" site="motor9" class="drone"/>
+    <motor ctrllimited="true" ctrlrange="0 1" gear="0  0. 1. 0. 0. -0.1" site="motor10" class="drone"/>
+    <motor ctrllimited="true" ctrlrange="0 1" gear="0  0. 1. 0. 0.  0.1" site="motor11" class="drone"/> -->
+</mujoco>

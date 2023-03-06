@@ -1,0 +1,92 @@
+<mujoco>
+    <body name="torso" pos="1.5 0 0" euler="0 0 -1" childclass="fish">
+        <!light name="light" diffuse=".6 .6 .6" pos="0 0 0.5" dir="0 0 -1" specular=".3 .3 .3" mode="track"/>
+        <!joint name="root" type="free" damping="0" limited="false"/>
+        <site name="torso" size=".01" rgba="0 0 0 0"/>
+        <geom name="eye" type="ellipsoid" pos="0 .055 .015" size=".008 .012 .008" euler="-10 0 0" material="eye" mass="0"/>
+        <geom name="mouth" type="capsule" fromto="0 .079 0 0 .07 0" size=".005" material="effector" mass="0"/>
+        <geom name="lower_mouth" type="capsule" fromto="0 .079 -.004 0 .07 -.003" size=".0045" material="effector" mass="0"/>
+        <geom name="torso" type="ellipsoid" size=".01 .08 .04" mass="0"/>
+        <geom name="back_fin" type="ellipsoid" size=".001 .03 .015" pos="0 -.03 .03" material="effector" mass="0"/>
+        <geom name="torso_massive" type="box" size=".002 .06 .03" group="4"/>
+        <body name="tail1" pos="0 -.09 0">
+            <joint name="tail1" axis="0 0 1" pos="0 .01 0"/>
+            <joint name="tail_twist" axis="0 1 0" pos="0 .01 0" range="-30 30"/>
+            <geom name="tail1" type="ellipsoid" size=".001 .008 .016"/>
+            <body name="tail2" pos="0 -.028 0">
+            <joint name="tail2" axis="0 0 1" pos="0 .02 0" stiffness="8e-5"/>
+            <geom name="tail2" type="ellipsoid" size=".001 .018 .035"/>
+            </body>
+        </body>
+        <body name="finright" pos=".01 0 0">
+            <joint name="finright_roll" axis="0 1 0"/>
+            <joint name="finright_pitch" axis="1 0 0" pos="0 .005 0"/>
+            <geom name="finright" type="ellipsoid" pos=".015 0 0" size=".02 .015 .001"  />
+        </body>
+        <body name="finleft" pos="-.01 0 0">
+            <joint name="finleft_roll" axis="0 1 0"/>
+            <joint name="finleft_pitch" axis="1 0 0" pos="0 .005 0"/>
+            <geom name="finleft" type="ellipsoid"  pos="-.015 0 0" size=".02 .015 .001"/>
+        </body>
+    </body>
+
+    <body name="torso_2" pos="1.5 0.5 0" euler="0 0 1" childclass="fish">
+        <!joint name="root" type="free" damping="0" limited="false"/>
+        <site name="torso_2" size=".01" rgba="0 0 0 0"/>
+        <geom name="eye_2" type="ellipsoid" pos="0 .055 .015" size=".008 .012 .008" euler="-10 0 0" material="eye" mass="0"/>
+        <geom name="mouth_2" type="capsule" fromto="0 .079 0 0 .07 0" size=".005" material="effector" mass="0"/>
+        <geom name="lower_mouth_2" type="capsule" fromto="0 .079 -.004 0 .07 -.003" size=".0045" material="effector" mass="0"/>
+        <geom name="torso_2" type="ellipsoid" size=".01 .08 .04" mass="0"/>
+        <geom name="back_fin_2" type="ellipsoid" size=".001 .03 .015" pos="0 -.03 .03" material="effector" mass="0"/>
+        <geom name="torso_massive_2" type="box" size=".002 .06 .03" group="4"/>
+        <body name="tail_2" pos="0 -.09 0">
+            <joint name="tail_2" axis="0 0 1" pos="0 .01 0"/>
+            <joint name="tail_twist_2" axis="0 1 0" pos="0 .01 0" range="-30 30"/>
+            <geom name="tail1_2" type="ellipsoid" size=".001 .008 .016"/>
+            <body name="tail2_2" pos="0 -.028 0">
+                <joint name="tail2_2" axis="0 0 1" pos="0 .02 0" stiffness="8e-5"/>
+                <geom name="tail2_2" type="ellipsoid" size=".001 .018 .035"/>
+            </body>
+        </body>
+        <body name="finright_2" pos=".01 0 0">
+            <joint name="finright_roll_2" axis="0 1 0"/>
+            <joint name="finright_pitch_2" axis="1 0 0" pos="0 .005 0"/>
+            <geom name="finright_2" type="ellipsoid" pos=".015 0 0" size=".02 .015 .001"  />
+        </body>
+        <body name="finleft_2" pos="-.01 0 0">
+            <joint name="finleft_roll_2" axis="0 1 0"/>
+            <joint name="finleft_pitch_2" axis="1 0 0" pos="0 .005 0"/>
+            <geom name="finleft_2" type="ellipsoid"  pos="-.015 0 0" size=".02 .015 .001"/>
+        </body>
+    </body>
+
+    <body name="torso_3" pos="2 -0.5 0" euler="0 0 2" childclass="fish">
+        <!joint name="root" type="free" damping="0" limited="false"/>
+        <site name="torso_3" size=".01" rgba="0 0 0 0"/>
+        <geom name="eye_3" type="ellipsoid" pos="0 .055 .015" size=".008 .012 .008" euler="-10 0 0" material="eye" mass="0"/>
+        <geom name="mouth_3" type="capsule" fromto="0 .079 0 0 .07 0" size=".005" material="effector" mass="0"/>
+        <geom name="lower_mouth_3" type="capsule" fromto="0 .079 -.004 0 .07 -.003" size=".0045" material="effector" mass="0"/>
+        <geom name="torso_3" type="ellipsoid" size=".01 .08 .04" mass="0"/>
+        <geom name="back_fin_3" type="ellipsoid" size=".001 .03 .015" pos="0 -.03 .03" material="effector" mass="0"/>
+        <geom name="torso_massive_3" type="box" size=".002 .06 .03" group="4"/>
+        <body name="tail_3" pos="0 -.09 0">
+            <joint name="tail_3" axis="0 0 1" pos="0 .01 0"/>
+            <joint name="tail_twist_3" axis="0 1 0" pos="0 .01 0" range="-30 30"/>
+            <geom name="tail1_3" type="ellipsoid" size=".001 .008 .016"/>
+            <body name="tail2_3" pos="0 -.028 0">
+                <joint name="tail2_3" axis="0 0 1" pos="0 .02 0" stiffness="8e-5"/>
+                <geom name="tail2_3" type="ellipsoid" size=".001 .018 .035"/>
+            </body>
+        </body>
+        <body name="finright_3" pos=".01 0 0">
+            <joint name="finright_roll_3" axis="0 1 0"/>
+            <joint name="finright_pitch_3" axis="1 0 0" pos="0 .005 0"/>
+            <geom name="finright_3" type="ellipsoid" pos=".015 0 0" size=".02 .015 .001"  />
+        </body>
+        <body name="finleft_3" pos="-.01 0 0">
+            <joint name="finleft_roll_3" axis="0 1 0"/>
+            <joint name="finleft_pitch_3" axis="1 0 0" pos="0 .005 0"/>
+            <geom name="finleft_3" type="ellipsoid"  pos="-.015 0 0" size=".02 .015 .001"/>
+        </body>
+    </body>
+</mujoco>

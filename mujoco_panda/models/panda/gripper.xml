@@ -1,0 +1,45 @@
+<mujoco>
+<body name="panda_hand" pos="0 0 0.107" euler="0 0 -0.785">
+    <inertial pos="0 0 0" euler="0 0 0" mass="0.68" diaginertia="0.1 0.1 0.1" />
+    <geom class="visual" mesh="hand_visual"/>
+    <geom class="collision" mesh="hand_collision"/>
+
+    <body name="panda_leftfinger" pos="0 0 0.0584" quat="1 0 0 0">
+        <joint name="panda_finger_joint1"  axis="0 1 0" type="slide" range="0 0.04" damping="100" armature='5'/>
+        <geom class="visual" mesh="finger_visual"/>
+        <geom class="collision" mesh="finger_collision" mass="0.01"/>
+    </body>
+
+    <body name="panda_rightfinger" pos="0 0 0.0584" quat="1 0 0 0">
+        <joint name="panda_finger_joint2" axis="0 -1 0" type="slide" range="0 0.04" damping="100" armature='5'/>
+        <geom quat="0 0 0 1" class="visual" mesh="finger_visual"/>
+        <geom quat="0 0 0 1" class="collision" mesh="finger_collision" mass="0.01"/>
+       
+    </body>
+    
+    <!-- <body name="body_whip_node1" euler="0 0 0" pos="0 0 0.1">
+        <joint name="joint_whip_node1_Y" type="hinge" axis="0 -1 0" pos="0 0 0" springref="0" stiffness="0" damping="0" range="-3.14 3.14"/>
+        <geom  type="cylinder" fromto="0 0 0 0 0 0.1" size="0.00500000" mass="0" />
+        <geom  name= "geom_whip_node1" type="sphere" material="WhipNodeColor" pos="0 0 0.1" size="0.0100000" mass="0.303" />
+        <body name="body_whip_node2" euler="0 0 0" pos="0 0 -0.07">
+            <joint name="joint_whip_node2_Y" type="hinge" axis="0 -1 0" pos="0 0 0" springref="0" stiffness="0.242" damping="0.005" range="-3.14 3.14"/>
+            <geom  type="cylinder" fromto="0 0 0 0 0 0.1" size="0.00500000" mass="0" />
+            <geom   name= "geom_whip_node2" type="sphere" material="WhipNodeColor" pos="0 0 0.1" size="0.0100000" mass="0.303" />
+            <body name="body_whip_node3" euler="0 0 0" pos="0 0 -0.07">
+                <joint name="joint_whip_node3_Y" type="hinge" axis="0 -1 0" pos="0 0 0" springref="0" stiffness="0.242" damping="0.005" range="-3.14 3.14"/>
+                <geom   type="cylinder" fromto="0 0 0 0 0 0.1" size="0.00500000" mass="0" />
+                <geom   name= "geom_whip_node3" type="sphere" material="WhipNodeColor" pos="0 0 0.1" size="0.0100000" mass="0.303" />
+            </body>
+        </body> 
+    </body>     -->
+    <! whip model>
+    <body name="whip" pos="0 0 0.1" euler="1.57 -2 -0.5">
+        <body name="B0" pos="-0.01 0 0" euler="0 3.14 0">
+            <composite type="rope" count="33 1 1" spacing="0.04" offset="0 0 2">
+                <joint kind="main" damping="0.005"/>
+                <geom type="capsule" size=".01 .015" rgba=".8 .2 .1 1" mass="0.005"/>
+            </composite>
+        </body>
+    </body>
+</body>
+</mujoco>
